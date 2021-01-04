@@ -222,6 +222,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     document.getElementById("details").classList.remove("hide");
     //document.getElementById("").classList.remove("hide");
     document.getElementById("whole").style.display="none";
+    document.getElementById("details").classList.add("animate__fadeInDown");
     document.getElementById("goto").classList.add("hide");
     document.getElementById("reset").classList.add("hide");
     document.getElementById("start-button").classList.add("hide");
@@ -268,6 +269,8 @@ else{
   document.getElementById("details-button").addEventListener("click",()=>{
     document.getElementById("whole").style.display="none";
     document.getElementById("details").classList.remove("hide");
+    document.getElementById("details").classList.add("animate__fadeInDown");
+    document.getElementById("details").classList.remove("hide");
     document.getElementById("details-button").classList.add("hide");
     document.getElementById("start-button").classList.add("hide");
     document.getElementById("submit").classList.add("hide");
@@ -275,6 +278,9 @@ else{
     document.getElementById("reset").classList.remove("hide");
   });
   document.getElementById("goto").addEventListener("click",()=>{
+    //document.getElementById("whole").classList.add("animate__fadeOutDown");
+    document.getElementById("details").classList.remove("animate__fadeInDown");
+   // document.getElementById("details").classList.add("animate__fadeInLeft");
     document.getElementById("whole").style.display="flex";
     document.getElementById("details-button").classList.remove("hide");
     document.getElementById("start-button").classList.remove("hide");
@@ -302,6 +308,7 @@ else{
    function gameover() {
        if(current.some(index=> squares[currentposition+index].classList.contains("taken"))){
         scoredisplay.innerHTML="END";
+       // document.getElementById("score").classList.add("animate__hinge");
         clearInterval(timerId);
         if(score>best){
             document.getElementById("three").innerText=document.getElementById("two").innerText;
@@ -345,13 +352,16 @@ else{
            rotate();}}
     });
     document.getElementById("play-button").addEventListener("click",()=>{
-    if(sound.play)
-    {
-        sound.pause();
-       // document.getElementById("play-button").innerHTML="<i class="fas fa-play"></i>";
-    }
      sound.play();
      sound.loop=true;
+     document.getElementById("play-button").classList.add("hide");
+     document.getElementById("pause-button").classList.remove("hide");
+    });
+    document.getElementById("pause-button").addEventListener("click",()=>{
+     sound.pause();
+     sound.currentTime=0;
+     document.getElementById("play-button").classList.remove("hide");
+     document.getElementById("pause-button").classList.add("hide");
     });
     // document.getElementById("dark-button").addEventListener("click",()=>{
     //    document.getElementById("body").classList.remove("black");

@@ -136,7 +136,7 @@ h4{
     top:20px;
     left:100px;
 }
-#play-button{
+#play-button,#pause-button{
     position: absolute;
     top:20px;
     right:20px;
@@ -162,7 +162,7 @@ h4{
         position: relative;
         left:15%;
     }
-    #start-button,#play-button,#details-button{
+    #start-button,#play-button,#details-button,#pause-button{
         position: relative;
         top:0;
         left:25%;

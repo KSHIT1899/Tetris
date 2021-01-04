@@ -12,17 +12,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tetris.css">
     <script src="tetris.js"></script>
-    
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Tetris</title>
 </head>
 <body id="body" class="black">
     <!-- <div class="whole" ></div> -->
     <h1>Tetris Game</h1>
-    <h3>Score:  <span id ="score">0</span></h3>
+    <h3 id="score" class="animate__animated">Score:  <span id ="score">0</span></h3>
     <button class="myButton btn btn-primary"id="start-button">Start</button>
     <button class="myButton btn btn-primary hide"id="details-button">Details</button>
     <button class="myButton btn btn-primary"id="play-button"><i class="fas fa-play"></i></button>
+    <button class="myButton btn btn-primary hide"id="pause-button"><i class="fas fa-pause"></i></button>
     <div id="whole">
     <div class="grid">
         <div></div>
@@ -259,7 +260,7 @@
         <div style="text-align: center;">Up next</div>
     </div>
 </div>
-<div id="details"class="hide">
+<div id="details"class="animate__animated hide">
     <input class="tname" id="username"type="text" placeholder="Name...">
     <div class="tname hide" id="cover"></div>
     <button class="btn btn-primary"id="submit">submit</button>
