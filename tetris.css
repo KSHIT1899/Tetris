@@ -84,6 +84,7 @@ background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, F
 }
 input{
     display: block;
+    color:black;
 }
 .tname{
     height: 30px;
