@@ -298,13 +298,22 @@ else{
   });
   document.getElementById("submit").addEventListener("click",()=>{
       var name=document.getElementById("username").value;
-      localStorage.setItem("tetrisusername",name);
-      document.getElementById("cover").innerText=name;
-      document.getElementById("details").classList.add("hide");
-      document.getElementById("cover").classList.remove("hide");
-      document.getElementById("username").classList.add("hide");
-      document.getElementById("start-button").classList.remove("hide");
-      document.getElementById("whole").style.display="flex";
+      if(name=="")
+      {
+          document.getElementById("score").innerText="Enter A valid Name";
+          document.getElementById("score").classList.add("animate__flipInY");
+      }
+      else{
+        document.getElementById("score").innerText="Score: 0";
+        document.getElementById("score").classList.remove("animate__flipInY");
+        localStorage.setItem("tetrisusername",name);
+        document.getElementById("cover").innerText=name;
+        document.getElementById("details").classList.add("hide");
+        document.getElementById("cover").classList.remove("hide");
+        document.getElementById("username").classList.add("hide");
+        document.getElementById("start-button").classList.remove("hide");
+        document.getElementById("whole").style.display="flex";
+      }
   });
   document.getElementById("details-button").addEventListener("click",()=>{
     document.getElementById("whole").style.display="none";
@@ -332,7 +341,7 @@ else{
           const row=[i,i+1,i+2,i+3,i+4,i+5,i+6,i+7,i+8,i+9];
           if(row.every(index => squares[index].classList.contains("taken"))){
               score+=10;
-              scoredisplay.innerHTML=score;
+              scoredisplay.innerHTML="Score: "+score;
               row.forEach(index=>{
                   squares[index].classList.remove("taken");
                   squares[index].classList.remove("tetromino");
