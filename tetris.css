@@ -145,6 +145,18 @@ h4{
     margin-top: 5px;
     margin-left:20px;
 }
+#end{
+    z-index: 1000;
+    margin-left:40%;
+    position: absolute;
+    top:200px;
+    width: 250px;
+    height: 130px;
+    text-align: center;
+    border: 2px solid #fff;
+    background-color: rgb(37, 35, 35);
+    border-radius: 5%;
+}
 @media only screen and (max-width:700px)
 {
     #details-button{
@@ -172,13 +184,13 @@ h4{
 
 @media only screen and (max-width:550px)
 {
-    #whole{
+    #whole,#end{
         margin-left:25%!important;
     }
 }
 @media only screen and (max-width:400px)
 {
-    #whole{
+    #whole,#end{
         margin-left:10%!important;
     }
 }

@@ -308,6 +308,10 @@ else{
    function gameover() {
        if(current.some(index=> squares[currentposition+index].classList.contains("taken"))){
         scoredisplay.innerHTML="END";
+        sound.pause();
+        document.getElementById("endscore").innerHTML="Well Played! <br> "+localStorage.getItem("tetrisusername")+"'s Score was "+score;
+        document.getElementById("end").classList.remove("hide");
+        document.getElementById("end").classList.add("animate__rotateIn");
        // document.getElementById("score").classList.add("animate__hinge");
         clearInterval(timerId);
         if(score>best){
@@ -318,6 +322,9 @@ else{
         }
        }
     }
+    document.getElementById("go-again").addEventListener("click",()=>{
+       window.location.reload();
+    });
     document.getElementById("left").addEventListener("click",()=>{
         undraw();
         const isatleftedge = current.some(index=>(currentposition+index)%GRID_WIDTH===0);
