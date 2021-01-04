@@ -209,14 +209,24 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
   //start and pause
   startbutton.addEventListener("click",()=>{
-      if(localStorage.getItem("tetrisusername")=="" || localStorage.getItem("tetrisusername")==null)
+      if(localStorage.getItem("tetrisusername")=="")
 {
     document.getElementById("details").classList.remove("hide");
+    //document.getElementById("").classList.remove("hide");
     document.getElementById("whole").style.display="none";
     document.getElementById("goto").classList.add("hide");
     document.getElementById("reset").classList.add("hide");
     document.getElementById("start-button").classList.add("hide");
     console.log("hey");
+}
+else if(localStorage.getItem("tetrisusername")==null){
+    document.getElementById("details").classList.remove("hide");
+    document.getElementById("username").classList.add("hide");
+    document.getElementById("cover").classList.remove("hide");
+    document.getElementById("whole").style.display="none";
+    document.getElementById("goto").classList.add("hide");
+    document.getElementById("reset").classList.add("hide");
+    document.getElementById("start-button").classList.add("hide");
 }
 else{
     if(timerId){
