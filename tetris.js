@@ -309,7 +309,14 @@ else{
        if(current.some(index=> squares[currentposition+index].classList.contains("taken"))){
         scoredisplay.innerHTML="END";
         sound.pause();
-        document.getElementById("endscore").innerHTML="Well Played! <br> "+localStorage.getItem("tetrisusername")+"'s Score was "+score;
+        if(score==0)
+        {
+            document.getElementById("endscore").innerHTML="Next Time :( <br> "+localStorage.getItem("tetrisusername")+"'s Score was "+score;
+        }
+        else
+        {
+            document.getElementById("endscore").innerHTML="Well Played! <br> "+localStorage.getItem("tetrisusername")+"'s Score was "+score;
+        }
         document.getElementById("end").classList.remove("hide");
         document.getElementById("end").classList.add("animate__rotateIn");
        // document.getElementById("score").classList.add("animate__hinge");
