@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <script src="https://kit.fontawesome.com/4f2640cf13.js" crossorigin="anonymous"></script> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tetris.css">
+    <script src="tetris.js"></script>
+    
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Tetris</title>
+</head>
+<body id="body" class="black">
+    <!-- <div class="whole" ></div> -->
+    <h1>Tetris Game</h1>
+    <h3>Score:  <span id ="score">0</span></h3>
+    <button class="myButton btn btn-primary"id="start-button">Start</button>
+    <button class="myButton btn btn-primary hide"id="details-button">Details</button>
+    <button class="myButton btn btn-primary"id="play-button"><i class="fas fa-play"></i></button>
+    <div id="whole">
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="taken hi"></div>
+        <div class="taken hi"></div>
+        <div class="taken hi"></div>
+        <div class="taken hi"></div>
+        <div class="taken hi"></div>
+        <div class="taken hi"></div>
+        <div class="taken hi"></div>
+        <div class="taken hi"></div>
+        <div class="taken hi"></div>
+        <div class="taken hi"></div>
+    </div>
+    <div>
+        <div class="mini-grid">
+            <!-- <p>umcoming tetromonial</p> -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div style="text-align: center;">Up next</div>
+    </div>
+</div>
+<div id="details"class="hide">
+    <input class="tname" id="username"type="text" placeholder="Name...">
+    <div class="tname hide" id="cover"></div>
+    <button class="btn btn-primary"id="submit">submit</button>
+    <div id="best">
+        <h4>Best Score</h4>
+        <div id="one"class="tname">Yet to be Made</div>
+        <div id="two"class="tname">Yet To be Made</div>
+        <div id="three"class="tname">Yet to be Made</div>
+    </div>
+    <h4>Instructions</h4>
+    <ul>
+        <li>Use &larr; &uarr; &darr; &rarr; key to move the Tetromino.</li>
+        <li>Once any side of Tetromino touches either the left or right edge the Tetromino will not rotate.</li>
+    </ul>
+    <button class="btn btn-primary"id="goto">Goto Game</button>
+    <button class="btn btn-primary"id="reset" >Reset</button>
+</div>
+<div class="arrows hide">
+    <h4>Controls</h4>
+    <span id="control">
+        <button class="btn btn-primary"id="left"><i  class="fas fa-arrow-left"></i></button>
+        <button class="btn btn-primary"id="right"></i><i class="fas fa-arrow-right"></i></button>
+        <button class="btn btn-primary"id="mdown"><i class="fas fa-arrow-down"></i></button>
+        <button class="btn btn-primary"id="rotate"><i class="fas fa-redo-alt"></i></button></span>
+</div>
+    <!-- <script typr="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script> -->
+</body>
+</html>
