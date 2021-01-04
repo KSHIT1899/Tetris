@@ -8,9 +8,45 @@ document.addEventListener('DOMContentLoaded',()=>{
     let timerId;
     let score=0;
     let down=300;
-    var best=0;
+    var best;
+    var one;
+    var two;
+    var three;
+    if(localStorage.getItem("best")==""||localStorage.getItem("best")==null)
+    {
+        best=0;
+    }
+    else{
+        best=localStorage.getItem("best");
+    }
     //console.log(document.getElementById("one").innerText);
      var sound= new Audio("Tetris.mp3");
+
+     //score for player
+     if(localStorage.getItem("one")==""||localStorage.getItem("one")==null)
+     {
+         one ="---"
+     }
+     else{
+         one=localStorage.getItem("one");
+     }
+     if(localStorage.getItem("two")==""||localStorage.getItem("two")==null)
+     {
+         two ="---"
+     }
+     else{
+         two=localStorage.getItem("two");
+     }
+     if(localStorage.getItem("three")==""||localStorage.getItem("three")==null)
+     {
+         three ="---"
+     }
+     else{
+         three=localStorage.getItem("three");
+     }
+     document.getElementById("one").innerText=one;
+     document.getElementById("two").innerText=two;
+     document.getElementById("three").innerText=three;
 
     //console.log(squares);
     if(localStorage.getItem("tetrisusername")==null)
@@ -36,6 +72,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     document.getElementById("reset").addEventListener("click",()=>{
         console.log("why");
         localStorage.setItem("tetrisusername","");
+        localStorage.setItem("best","");
+        localStorage.setItem("one","");
+        localStorage.setItem("two","");
+        localStorage.setItem("three","");
         document.getElementById("cover").innerText="";
         document.getElementById("cover").classList.add("hide");
         document.getElementById("username").classList.remove("hide");
@@ -323,9 +363,12 @@ else{
         clearInterval(timerId);
         if(score>best){
             document.getElementById("three").innerText=document.getElementById("two").innerText;
+            localStorage.setItem("three",two);
             document.getElementById("two").innerText=document.getElementById("one").innerText;
+            localStorage.setItem("two",one);
             document.getElementById("one").innerText=score;
-            best=score;
+            localStorage.setItem("one",score);
+            localStorage.setItem("best",score);
         }
        }
     }
