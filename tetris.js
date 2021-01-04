@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
   //start and pause
   startbutton.addEventListener("click",()=>{
-      if(localStorage.getItem("tetrisusername")=="")
+      if(localStorage.getItem("tetrisusername")=="" || localStorage.getItem("tetrisusername")==null)
 {
     document.getElementById("details").classList.remove("hide");
     //document.getElementById("").classList.remove("hide");
