@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     //console.log(squares);
     if(localStorage.getItem("tetrisusername")==null)
     {
-        document.getElementById("cover").add("hide");
-        document.getElementById("username").remove("hide");
+        document.getElementById("cover").classList.add("hide");
+        document.getElementById("username").classList.remove("hide");
     }
     if(localStorage.getItem("tetrisusername")!="")
     {
