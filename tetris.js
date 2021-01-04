@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded',()=>{
      var sound= new Audio("Tetris.mp3");
 
     //console.log(squares);
+    if(localStorage.getItem("tetrisusername")==null)
+    {
+        document.getElementById("cover").add("hide");
+        document.getElementById("username").remove("hide");
+    }
     if(localStorage.getItem("tetrisusername")!="")
     {
        // console.log(localStorage.getItem("tetrisusername"));
@@ -219,15 +224,15 @@ document.addEventListener('DOMContentLoaded',()=>{
     document.getElementById("start-button").classList.add("hide");
     console.log("hey");
 }
-else if(localStorage.getItem("tetrisusername")==null){
-    document.getElementById("details").classList.remove("hide");
-    document.getElementById("username").classList.add("hide");
-    document.getElementById("cover").classList.remove("hide");
-    document.getElementById("whole").style.display="none";
-    document.getElementById("goto").classList.add("hide");
-    document.getElementById("reset").classList.add("hide");
-    document.getElementById("start-button").classList.add("hide");
-}
+// else if(localStorage.getItem("tetrisusername")==null){
+//     document.getElementById("details").classList.remove("hide");
+//     document.getElementById("username").classList.add("hide");
+//     document.getElementById("cover").classList.remove("hide");
+//     document.getElementById("whole").style.display="none";
+//     document.getElementById("goto").classList.add("hide");
+//     document.getElementById("reset").classList.add("hide");
+//     document.getElementById("start-button").classList.add("hide");
+// }
 else{
     if(timerId){
         console.log("hey2");
