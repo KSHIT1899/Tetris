@@ -17,17 +17,20 @@ document.addEventListener('DOMContentLoaded',()=>{
     {
         document.getElementById("cover").classList.add("hide");
         document.getElementById("username").classList.remove("hide");
+        console.log("nhi");
     }
-    if(localStorage.getItem("tetrisusername")!="")
+    else if(localStorage.getItem("tetrisusername")!="")
     {
        // console.log(localStorage.getItem("tetrisusername"));
         document.getElementById("cover").innerText=localStorage.getItem("tetrisusername");
         document.getElementById("cover").classList.remove("hide");
         document.getElementById("username").classList.add("hide");
+        console.log("nhi2");
     }
     else{
         document.getElementById("cover").classList.add("hide");
         document.getElementById("username").classList.remove("hide");
+        console.log("nhi3");
     }
 
     document.getElementById("reset").addEventListener("click",()=>{
