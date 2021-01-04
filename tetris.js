@@ -258,7 +258,10 @@ else{
   document.getElementById("submit").addEventListener("click",()=>{
       var name=document.getElementById("username").value;
       localStorage.setItem("tetrisusername",name);
+      document.getElementById("cover").innerText=name;
       document.getElementById("details").classList.add("hide");
+      document.getElementById("cover").classList.remove("hide");
+      document.getElementById("username").classList.add("hide");
       document.getElementById("start-button").classList.remove("hide");
       document.getElementById("whole").style.display="flex";
   });
